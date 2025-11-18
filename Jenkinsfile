@@ -4,9 +4,9 @@ pipeline {
             label 'agent-alpine'
             }
       }
-    triggers {
-        pollSCM '* * * * *'
-    }
+    // triggers {
+    //     pollSCM '* * * * *'
+    // }
     stages {
         stage('Build') {
             steps {

@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'agent-alpine
+            label 'agent-alpine'
             }
       }
     triggers {

@@ -1,8 +1,8 @@
 FROM jenkins/jenkins:lts-jdk17
 # FROM jenkins/agent:alpine
 USER root
-# RUN apk update && apk add python3 py3-pip
-RUN apt-get update && apt-get install -y python3 python3-pip curl docker.io docker-ce-cli
+# RUN apk update && apk add python3 py3-pipRUN apt-get update && apt-get install -y python3 python3-pip curl docker.io
+RUN apt-get update && apt-get install -y python3 python3-pip curl docker.io
 # RUN apk update && apk add --no-cache \
 #     python3 py3-pip \
 #     curl \

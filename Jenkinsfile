@@ -13,8 +13,8 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "building"
-                apk update
-                apk add --no-cache python3 py3-pip
+                sudo apk update
+                sudo apk add --no-cache python3 py3-pip
                 '''
             }
         }

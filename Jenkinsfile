@@ -13,7 +13,8 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "building"
-                apt-get install -y python3 python3-pip
+                apk update
+                apk add --no-cache python3 py3-pip
                 '''
             }
         }

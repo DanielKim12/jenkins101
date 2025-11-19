@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'python-agent'
+            label 'agent-alpine'
             }
       }
     triggers {
@@ -13,6 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 echo "building"
+                apt-get install -y python3 python3-pip
                 '''
             }
         }

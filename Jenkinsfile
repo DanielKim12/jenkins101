@@ -4,9 +4,9 @@ pipeline {
             label 'slave1'
             }
       }
-    // triggers {
-    //     pollSCM '* * * * *'
-    // }
+    triggers {
+        pollSCM '* * * * *'
+    }
     stages {
         stage('Build') {
             steps {

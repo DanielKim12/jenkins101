@@ -20,7 +20,6 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                python3 calc.py
                 robot sanity-check(login,network,nvme,gpu).robot
                 '''
             }

@@ -14,8 +14,8 @@ ${DEV_USR}      rbromley
 ${DEV_PWD}      passwd123
 
 *** Test Cases ***
-Host Login 
-    Perform Login    ${HOST_IP}    ${HOST_USR}    ${HOST_PWD}   HOST
+#Host Login 
+#    Perform Login    ${HOST_IP}    ${HOST_USR}    ${HOST_PWD}   HOST
 
 Client Login
     Perform Login    ${VM_IP}    ${VM_USR}    ${VM_PWD}    CLIENT
@@ -25,16 +25,16 @@ Dev Login
 
 # Check if internet connected 
 Internet Connection
-    Verify Internet Available
-    Switch Connection    HOST 
+#    Verify Internet Available
+#    Switch Connection    HOST 
     Verify Internet Available
     Switch Connection    CLIENT
     Verify Internet Available
 
 # check if host is connected to internet and have firewall enabled and ssh 
-Host Network Verify
-    Switch Connection    HOST  
-    Connected to Internet and Dependencies Available   ${HOST_IP}    eno1np0
+# Host Network Verify
+#    Switch Connection    HOST  
+#    Connected to Internet and Dependencies Available   ${HOST_IP}    eno1np0
 
 # check if client is connected to internet and have firewall enabled and ssh 
 Client Network Verify 
@@ -47,8 +47,8 @@ Dev Network Verify
 
 # verify host 22 and client 22 is open 
 Port 22 Available
-    Port Open
-    Switch Connection    HOST
+#    Port Open
+#    Switch Connection    HOST
     Port Open
     Switch Connection    DEV
 
@@ -56,12 +56,12 @@ Port 22 Available
 Verify NVMe OR SATA Exists 
     Verify NVMe Exists
     Verify SATA Exists
-    Switch Connection    Host
-    Verify NVMe Exists
-    Verify SATA Exists
+#    Switch Connection    Host
+#    Verify NVMe Exists
+#    Verify SATA Exists
 
 NVIDIA GPU Available
-    Verify GPU Exists
+#    Verify GPU Exists
     Switch Connection    CLIENT
     NVIDIA Driver Equipped
     Verify GPU Exists

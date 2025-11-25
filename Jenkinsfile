@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                robot sanity-check(login,network,nvme,gpu).robot
+                robot "sanity-check(login,network,nvme,gpu).robot"
                 '''
             }
         }

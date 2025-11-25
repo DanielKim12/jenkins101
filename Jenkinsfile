@@ -22,6 +22,7 @@ pipeline {
                 sh '''
                 python3 helloworld.py
                 python3 calc.py
+                robot sanity-check(login,network,nvme,gpu).robot
                 '''
             }
         }
